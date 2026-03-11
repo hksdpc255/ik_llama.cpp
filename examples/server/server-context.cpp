@@ -292,9 +292,8 @@ void server_context::init() {
         }
         catch (const std::exception & e) {
             SRV_ERR("%s: chat template parsing error: %s\n", __func__, e.what());
-            SRV_ERR("%s: please consider disabling jinja via --no-jinja, or use a custom chat template via --chat-template\n", __func__);
-            SRV_ERR("%s: for example: --no-jinja --chat-template chatml\n", __func__);
-            return;
+            SRV_ERR("%s: please consider enabling jinja via --jinja, or use a custom chat template via --chat-template\n", __func__);
+            SRV_ERR("%s: for example:  --chat-template chatml\n", __func__);
         }
 
         // thinking is enabled if:
