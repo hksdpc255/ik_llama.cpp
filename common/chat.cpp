@@ -1282,8 +1282,6 @@ static common_chat_params common_chat_params_init_mirothinker(const common_chat_
     data.prompt = common_chat_template_direct_apply(tmpl, inputs);
     data.format = COMMON_CHAT_FORMAT_PEG_NATIVE;
     data.supports_thinking = true;
-    data.thinking_start_tag = "<think>";
-    data.thinking_end_tag = "</think>";
     data.preserved_tokens = {
         "<think>",
         "</think>",
